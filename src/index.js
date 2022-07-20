@@ -3,9 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 class Square extends React.Component {
+    // squareの初期値をthis.stateに保存する
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: null,
+        };
+    }
     render() {
       return (
-        <button className="square">
+        <button className="square" onClick={function(){console.log('click');}}>
           { this.props.value }
         </button>
       );
